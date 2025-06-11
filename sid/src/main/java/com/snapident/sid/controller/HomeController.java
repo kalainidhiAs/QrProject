@@ -29,7 +29,7 @@ public class HomeController {
     public String submitForm(@ModelAttribute Person person, Model model) {
         Person saved = personRepository.save(person);
 
-        String qrText = "http://localhost:8081/person/view/" + saved.getId();
+        String qrText = "http://localhost:8080/person/view/" + saved.getId();
         String sanitizedFullName = saved.getFullName().replaceAll("[^a-zA-Z0-9]", "_");
         String fileName = "person_" + saved.getId() + "_" + sanitizedFullName + ".png";
 
