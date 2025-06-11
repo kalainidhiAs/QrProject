@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .qr-section img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .message {
+            text-align: center;
+            font-weight: bold;
+            color: green;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Submitted Person Details</h2>
+
+    <div class="message" th:if="${message}" th:text="${message}">Saved & QR Code Generated!</div>
+
+    <table>
+        <tr><th>Field</th><th>Value</th></tr>
+        <tr><td>Full Name</td><td th:text="${person.fullName}">N/A</td></tr>
+        <tr><td>Gender</td><td th:text="${person.gender}">N/A</td></tr>
+        <tr><td>Age</td><td th:text="${person.age}">N/A</td></tr>
+        <tr><td>Blood Group</td><td th:text="${person.bloodGroup}">N/A</td></tr>
+        <tr><td>Nationality</td><td th:text="${person.nationality}">N/A</td></tr>
+        <tr><td>Phone Number</td><td th:text="${person.phoneNumber}">N/A</td></tr>
+        <tr><td>Alternate Phone Number</td><td th:text="${person.alternatePhoneNumber}">N/A</td></tr>
+        <tr><td>Email</td><td th:text="${person.email}">N/A</td></tr>
+        <tr><td>Permanent Address</td><td th:text="${person.permanentAddress}">N/A</td></tr>
+        <tr><td>Current Address</td><td th:text="${person.currentAddress}">N/A</td></tr>
+        <tr><td>ID Proof Type</td><td th:text="${person.idProofType}">N/A</td></tr>
+        <tr><td>ID Proof Number</td><td th:text="${person.idProofNumber}">N/A</td></tr>
+        <tr><td>Emergency Contact Name</td><td th:text="${person.emergencyContactName}">N/A</td></tr>
+        <tr><td>Emergency Contact Relation</td><td th:text="${person.emergencyContactRelation}">N/A</td></tr>
+        <tr><td>Emergency Contact Number</td><td th:text="${person.emergencyContactNumber}">N/A</td></tr>
+        <tr><td>Medical Conditions</td><td th:text="${person.medicalConditions}">N/A</td></tr>
+        <tr><td>Allergies</td><td th:text="${person.allergies}">N/A</td></tr>
+        <tr><td>Current Medications</td><td th:text="${person.currentMedications}">N/A</td></tr>
+        <tr><td>Health Insurance Provider</td><td th:text="${person.healthInsuranceProvider}">N/A</td></tr>
+        <tr><td>Health Insurance Policy Number</td><td th:text="${person.healthInsurancePolicyNumber}">N/A</td></tr>
+    </table>
+
+</body>
+</html>

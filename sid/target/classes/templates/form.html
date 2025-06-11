@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Details Form</title>
+</head>
+<body>
+    <h2>Enter Personal Details</h2>
+   <form method="post" th:action="@{/person/form/submit}" th:object="${person}">
+
+        <label>Full Name:</label><br>
+        <input type="text" th:field="*{fullName}" required><br>
+
+        <label>Gender:</label><br>
+        <input type="text" th:field="*{gender}" required><br>
+
+        <label>Age:</label><br>
+        <input type="number" th:field="*{age}" required><br>
+
+        <label>Blood Group:</label><br>
+        <input type="text" th:field="*{bloodGroup}" required><br>
+
+        <label>Nationality:</label><br>
+        <input type="text" th:field="*{nationality}" required><br>
+
+        <label>Phone Number:</label><br>
+        <input type="text" th:field="*{phoneNumber}" required><br>
+
+        <label>Alternate Phone Number:</label><br>
+        <input type="text" th:field="*{alternatePhoneNumber}" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" th:field="*{email}"><br>
+
+        <label>Permanent Address:</label><br>
+        <textarea th:field="*{permanentAddress}" required></textarea><br>
+
+        <label>Current Address:</label><br>
+        <textarea th:field="*{currentAddress}" required></textarea><br>
+
+        <label>ID Proof Type:</label><br>
+        <input type="text" th:field="*{idProofType}" required><br>
+
+        <label>ID Proof Number:</label><br>
+        <input type="text" th:field="*{idProofNumber}" required><br>
+
+        <label>Emergency Contact Name:</label><br>
+        <input type="text" th:field="*{emergencyContactName}" required><br>
+
+        <label>Emergency Contact Relation:</label><br>
+        <input type="text" th:field="*{emergencyContactRelation}" required><br>
+
+        <label>Emergency Contact Number:</label><br>
+        <input type="text" th:field="*{emergencyContactNumber}" required><br>
+
+        <label>Medical Conditions:</label><br>
+        <textarea th:field="*{medicalConditions}"></textarea><br>
+
+        <label>Allergies:</label><br>
+        <textarea th:field="*{allergies}"></textarea><br>
+
+        <label>Current Medications:</label><br>
+        <textarea th:field="*{currentMedications}"></textarea><br>
+
+        <label>Health Insurance Provider:</label><br>
+        <input type="text" th:field="*{healthInsuranceProvider}"><br>
+
+        <label>Health Insurance Policy Number:</label><br>
+        <input type="text" th:field="*{healthInsurancePolicyNumber}"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

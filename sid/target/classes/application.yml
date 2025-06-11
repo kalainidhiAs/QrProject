@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/, file:./qrcodes/
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/snapIdentity
+    username: root
+    password: asdfghjkl
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jmx:
+        enabled: false
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  
+  thymeleaf:
+    cache: false
+
+
+  
